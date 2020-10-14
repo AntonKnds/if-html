@@ -38,7 +38,7 @@ h2 {
 }
 
 .item-4 {
-  width: calc(100%/4);
+  width: calc(100% / 4);
 }
 
 .icon-wrap {
@@ -51,7 +51,7 @@ h2 {
 }
 
 .item-3 {
-  width: calc(100%/3);
+  width: calc(100% / 3);
 }
 
 .item-header {
@@ -94,3 +94,138 @@ a {
 .footer {
   background-color: #10367C;
 }
+
+.support {
+  width: 75px;
+  height: 91px;
+}
+
+.chat {
+  width: 83px;
+  height: 83px;
+  background-position-x: -75px;
+}
+
+.device {
+  width: 99px;
+  height: 66px;
+  background-position: -159px -13px;
+}
+
+.like {
+  width: 91px;
+  height: 83px;
+  background-position: -258px -5px;
+}
+
+.sprite {
+  background-color: transparent;
+  background-image: url('../images/sprite.svg');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.header {
+  height: 100vh;
+  background-color: #383838;
+  background-image: url("../images/night.png");
+  padding: 51px 104px;
+  object-fit: none;
+  object-position: center top;
+  background-repeat: no-repeat;
+}
+
+.top-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 196px;
+}
+
+.logo {
+  width: 205px;
+  height: 40px;
+  background-position: -350px -25px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.night {
+  width: 29px;
+  height: 30px;
+  background-position: -555px;
+  margin-left: 24px;
+}
+
+.account {
+  width: 40px;
+  height: 40px;
+  background-position: -585px -25px;
+  margin-left: 24px;
+}
+
+.link {
+  margin-right: 24px;
+}
+
+.text-left {
+  width: 50px;
+}
+
+h1 {
+  width: 542px;
+  height: 118px;
+  left: 310px;
+  top: 261px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+
+form {
+  padding-top: 145px;
+}
+
+.apps {
+  width: 100%;
+  padding-top: 120px;
+  color: red;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.android {
+  width: 135px;
+  height: 40px;
+  background-position: -625px -26px;
+}
+
+.iphone {
+  width: 120px;
+  height: 40px;
+  background-position: -760px -25px;
+}
+
+.active {
+  text-decoration: none;
+  border-bottom: 4px solid #F5BD41;
+  padding-bottom: 12px;
+}
+
