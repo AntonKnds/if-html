@@ -121,17 +121,17 @@ a {
 }
 
 .header {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #383838;
   background-image: url("../images/night.png");
-  padding: 51px 104px;
   object-fit: none;
   object-position: center top;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .top-header {
-  display: flex;
+  display: inline-flex;
   width: 100%;
   justify-content: space-between;
   padding-bottom: 196px;
@@ -175,10 +175,6 @@ nav li {
   margin-right: 24px;
 }
 
-.text-left {
-  width: 50px;
-}
-
 h1 {
   font-style: normal;
   font-weight: 500;
@@ -195,6 +191,7 @@ form {
   padding-top: 120px;
   display: inline-flex;
   justify-content: center;
+  
 }
 
 .android {
@@ -215,3 +212,6 @@ form {
   padding-bottom: 12px;
 }
 
+.main {
+  width: 100%;
+}
