@@ -148,7 +148,6 @@ a {
   object-fit: none;
   object-position: center top;
   background-repeat: no-repeat;
-  width: 100%;
   padding: 51px 104px;
 }
 
@@ -230,6 +229,7 @@ h1 {
   font-weight: 500;
   font-size: 50px;
   color: #FFFFFF;
+  margin-bottom: 100px;
 }
 
 form {
@@ -267,3 +267,56 @@ form {
   display: none;
 }
 
+form {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  margin:0;
+}
+
+.name {
+  height: 64px;
+  flex-grow: 1;
+  border: 3px solid #F3F3F4;
+  border-radius: 8px;
+  border-right: none;
+}
+
+.date {
+  height: 64px;
+  border: 3px solid #F5BD41;
+  border-radius: 8px;
+  width: 259px;
+}
+
+.select {
+  height: 64px;
+  width: 467px;
+  border: 3px solid #F3F3F4;
+  border-left: none;
+  border-right: none;
+  appearance: none;
+  text-align: center;
+  font-size: 18px;
+  color: #383838;
+  padding:0 auto;
+}
+
+.button {
+  width: 192px;
+  height: 64px;
+  background: #3077C6;
+  border-radius: 8px;
+  border: none;
+  font-size: 24px;
+  color:#FFFFFF;
+}
+
+.label {
+  color:#FFFFFF;
+  font-size: 18px;
+  margin-bottom: 24px;
+}

@@ -6,7 +6,7 @@
 	<meta name="keywords" content="HTML, CSS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./style/style.css">
-	<title>HomeWork 7</title>
+	<title>HomeWork</title>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="sprite">
@@ -255,15 +255,25 @@
 	</div>
 	<div class="container">
 		<h1>Discover stays<br> to live, work or just relax</h1>
-		<form action="get">
-			<label for="Name"></label>
-			<input type="text" id="Name">
-			<label for="Data"></label>
-			<input type="date" id="Data">
-			<label for="select"></label>
-			<select name="select" id="select"></select>
-			<input type="button" value="Search">
-		</form>
+		<div class="label">
+			<label for="Name">
+				Your destination or hotel name
+			</label>
+			<label for="Data">
+				Check-in — Check-out
+			</label>
+		</div>
+		<div class="form">
+			<form action="get">
+				<input type="text" id="Name" class="name">
+				<input type="date" id="Data" class="date">
+				<label for="select"></label>
+				<select name="select" id="select" class="select">
+					<option>2 Adults — 0 Children — 1 Room</option>
+				</select>
+				<input type="button" value="Search" class="button">
+			</form>
+		</div>
 		<div class="apps">
 			<div>
 				<svg class="google-play">
