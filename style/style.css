@@ -212,10 +212,6 @@ form {
   margin-left: 24px;
 }
 
-/*[class*="col-"] {
-  flex: 1;
-}*/
-
 .col-3 {
   flex-grow: 1;
 }
@@ -287,8 +283,10 @@ form {
 }
 
 .logo-hide svg{
-  font-size: 98px;
   fill:#FFFFFF;
+  width: 98px;
+  height: 19px;
+  margin-bottom: 40px;
 }
 
 @media only  screen and (max-width: 480px) {
@@ -296,6 +294,7 @@ form {
   .col-3 {
     flex-grow: 0;
     width: 100%;
+	margin-bottom:40px;
   }
   
   .container {
@@ -303,7 +302,7 @@ form {
     padding-bottom: 40px;
   }
   
-  .h2 {
+  h2 {
     font-size: 28px;
     margin-bottom: 32px;
   }
@@ -315,16 +314,15 @@ form {
   .offer svg {
     font-size: 60px;
     fill: #3077C6;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   
-  .offer svg:last-child {
+  .col-3:last-child  {
     margin-bottom: 0;
   }
   
   .offer-title {
     font-size: 15px;
-    margin-bottom: 34px;
   }
   
   .col-4 {
@@ -335,6 +333,7 @@ form {
     font-size: 15px;
     text-align: center;
     text-decoration: underline;
+	text-decoration-color: #FFF;
   }
   
   .item-value {
