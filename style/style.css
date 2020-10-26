@@ -123,9 +123,8 @@ a {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 51px 16px;
-  max-width: 1264px;
-  margin-bottom: 25px;
+  margin-bottom: 196px;
+  margin-top: -69px;
 }
 
 .logo-svg {
@@ -345,6 +344,35 @@ form {
   width: 100%;
 }
 
+.section {
+  background-color: var(--bg-color);
+}
+
+.arrow-svg {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  z-index: 1;
+}
+
+.last-picture {
+  position: relative;
+}
+
+figcaption {
+  font-weight: normal;
+  font-size: 24px;
+  color: #3077C6;
+  margin: 24px 0;
+}
+
+.location {
+  font-weight: normal;
+  font-size: 24px;
+  color: #BFBFBF;
+}
+
 @media only  screen and (max-width: 480px) {
   
   .container {
@@ -417,8 +445,7 @@ form {
     position: relative;
   }
   
-  .label, form, ul li.stays, ul li.attractions
-  {
+  .label, form, ul li.stays, ul li.attractions {
     display: none;
   }
   

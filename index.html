@@ -10,6 +10,25 @@
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="sprite">
+	<symbol id="arrow" viewBox="0 0 48 48">
+		<g filter="url(#filter0_d)">
+			<circle cx="24" cy="20" r="20" fill="#F3F3F4"/>
+			<path d="M19.9412 29.8235L26.1 21.6118C26.6333 20.9007 26.6333 19.9229 26.1 19.2118L19.9412 11" stroke="#383838"
+			      stroke-width="2"/>
+		</g>
+		<defs>
+			<filter id="filter0_d" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse"
+			        color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+				<feOffset dy="4"/>
+				<feGaussianBlur stdDeviation="2"/>
+				<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+			</filter>
+		</defs>
+	</symbol>
 	<symbol id="menu" viewBox="0 0 24 16">
 		<path
 			d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z" fill="white"/>
@@ -264,6 +283,50 @@
 		</div>
 	</div>
 	<div class="container">
+		<div class="nav">
+			<div class="logo">
+				<a href="#">
+					<svg class="logo-svg">
+						<use href="#logo"/>
+					</svg>
+				</a>
+			</div>
+			<div class="link">
+				<ul>
+					<li class="stays">
+						<a href="#" class="active">
+							Stays
+						</a>
+					</li>
+					<li class="attractions">
+						<a href="#">
+							Attractions
+						</a>
+					</li>
+					<li class="night-btn">
+						<a href="#">
+							<svg class="night">
+								<use href="#night"/>
+							</svg>
+						</a>
+					</li>
+					<li class="account-btn">
+						<a href="#">
+							<svg class="account">
+								<use href="#account"/>
+							</svg>
+						</a>
+					</li>
+					<li class="mob-menu">
+						<a href="#">
+							<svg class="menu">
+								<use href="#menu"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<h1>Discover stays<br> to live, work or just relax</h1>
 		<div class="label">
 			<label for="Name" class="name-label">
@@ -333,6 +396,44 @@
 				<span class="offer-title">
 					Real guest reviews
 				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section">
+	<div class="container">
+		<h2 class="text-center">Homes guests loves</h2>
+		<div class="row">
+			<div class="col-3">
+				<figure>
+					<img src="./images/Russia.svg" alt="Russia">
+					<figcaption class="moscow">Hotel Leopold</figcaption>
+				</figure>
+				<span class="location">Saint Petersburg, Russia</span>
+			</div>
+			<div class="col-3">
+				<figure>
+					<img src="./images/Spain.svg" alt="Spain">
+					<figcaption class="moscow">Apartment Sunshine</figcaption>
+				</figure>
+				<span class="location">Santa  Cruz de Tenerife, Spain</span>
+			</div>
+			<div class="col-3">
+				<figure>
+					<img src="./images/Slowakia.svg" alt="Slowakia">
+					<figcaption class="moscow">Villa Kunerad</figcaption>
+				</figure>
+				<span class="location">Vysokie Tatry, Slowakia</span>
+			</div>
+			<div class="col-3 last-picture">
+				<figure>
+					<img src="./images/Germany.svg" alt="Germany">
+					<figcaption class="moscow">Hostel Friendship</figcaption>
+				</figure>
+				<span class="location">Berlin, Germany</span>
+				<svg class="arrow-svg">
+					<use href="#arrow"/>
+				</svg>
 			</div>
 		</div>
 	</div>
