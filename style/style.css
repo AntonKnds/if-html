@@ -23,6 +23,7 @@
   --gray-300: #4D4D4D;
   
   --col-size: calc(100% / 12);
+  --col-xs-size: calc(100% / 6);
 }
 
 .container {
@@ -32,7 +33,7 @@
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 104px;
   font-size: 40px;
   font-weight: 500;
 }
@@ -52,6 +53,7 @@ h2 {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -8px;
 }
 
 svg {
@@ -66,7 +68,7 @@ svg {
 }
 
 .item-header {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -85,11 +87,11 @@ a {
 }
 
 .copy {
-  padding-top: 65px;
   color: #fff;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  margin-top: 40px;
 }
 
 .offer-title {
@@ -104,12 +106,11 @@ a {
 
 .header {
   min-height: 100vh;
-  background-color: #383838;
+  background-color: var(--gray-300);
   background-image: url("../images/night.png");
   object-fit: none;
   object-position: center top;
   background-repeat: no-repeat;
-  padding: 51px 104px;
 }
 
 .sprite {
@@ -122,9 +123,12 @@ a {
 .nav {
   display: flex;
   justify-content: space-between;
+  padding: 51px 16px;
+  max-width: 1264px;
+  margin-bottom: 25px;
 }
 
-.logo {
+.logo-svg {
   width: 205px;
   height: 40px;
   fill: var(--primary);
@@ -148,6 +152,19 @@ a {
   font-style: normal;
   font-weight: 400;
   vertical-align: middle;
+  padding-right: 22px;
+}
+
+.nav li.account-btn {
+  padding-right: 0;
+}
+
+.nav li:nth-child(2) {
+  padding-right: 43px;
+}
+
+li.mob-menu {
+  display: none;
 }
 
 .link a {
@@ -185,7 +202,6 @@ a {
 }
 
 h1 {
-  margin-top: 76px;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
@@ -204,31 +220,20 @@ form {
   align-items: center;
 }
 
-.margin-right {
-  margin-right: 24px;
+[class*="col-"] {
+  flex-grow: 0;
 }
 
-.margin-left {
-  margin-left: 24px;
-}
-
-/*[class*="col-"] {
-  flex: 1;
-}*/
-
-.col-3 {
+[class*="col"] {
   flex-grow: 1;
-}
-
-.col-4 {
-  flex-grow: 1;
+  padding: 0 8px;
 }
 
 form {
   width: 100%;
   height: 64px;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #fff;
   border-radius: 8px;
   display: flex;
   margin: 0;
@@ -280,61 +285,101 @@ form {
 }
 
 .logo-hide {
-  margin: 0 auto;
+  margin: 0 auto 37px;
   flex-grow: 1;
   text-align: center;
   display: none;
 }
 
-.logo-hide svg{
-  font-size: 98px;
-  fill:#FFFFFF;
+.logo-hide svg {
+  width: 98px;
+  height: 19px;
+  fill: #FFFFFF;
+}
+
+.col-1 {
+  width: var(--col-size);
+}
+
+.col-2 {
+  width: calc(var(--col-size) * 2);
+}
+
+.col-3 {
+  width: calc(var(--col-size) * 3);
+}
+
+.col-4 {
+  width: calc(var(--col-size) * 4);
+}
+
+.col-5 {
+  width: calc(var(--col-size) * 5);
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: calc(var(--col-size) * 7);
+}
+
+.col-8 {
+  width: calc(var(--col-size) * 8);
+}
+
+.col-9 {
+  width: calc(var(--col-size) * 9);
+}
+
+.col-10 {
+  width: calc(var(--col-size) * 10);
+}
+
+.col-11 {
+  width: calc(var(--col-size) * 11);
+}
+
+.col-12 {
+  width: 100%;
 }
 
 @media only  screen and (max-width: 480px) {
-  
-  .col-3 {
-    flex-grow: 0;
-    width: 100%;
-  }
   
   .container {
     padding-top: 40px;
     padding-bottom: 40px;
   }
   
-  .h2 {
+  h2 {
     font-size: 28px;
     margin-bottom: 32px;
   }
   
-  .title-line {
-    display: none;
-  }
-  
   .offer svg {
     font-size: 60px;
-    fill: #3077C6;
-    margin-bottom: 40px;
-  }
-  
-  .offer svg:last-child {
-    margin-bottom: 0;
+    fill: var(--primary);
+    margin-bottom: 22px;
   }
   
   .offer-title {
     font-size: 15px;
-    margin-bottom: 34px;
   }
   
-  .col-4 {
-    flex-grow: 1;
+  .col-xs-6 {
+    margin-bottom: 32px;
+  }
+  
+  .col-xs-6:last-child {
+    margin-bottom: 0;
   }
   
   .item-header {
     font-size: 15px;
     text-align: center;
     text-decoration: underline;
+    margin-bottom: 0;
   }
   
   .item-value {
@@ -343,12 +388,115 @@ form {
   
   .copy {
     text-align: center;
-    padding-top: 32px;
     font-size: 12px;
+    margin-top: 0;
   }
   
   .logo-hide {
     display: block;
+  }
+  
+  .col-xs-2 {
+    margin-bottom: 31px;
+  }
+  
+  .text-end {
+    text-align: end;
+  }
+  
+  .text-start {
+    text-align: start;
+  }
+  
+  .header {
+    min-height: 100%;
+  }
+  
+  .link ul {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  .label, form, ul li.stays, ul li.attractions
+  {
+    display: none;
+  }
+  
+  .nav {
+    padding: 12px 16px;
+    margin-bottom: 40px;
+  }
+  
+  .nav li {
+    padding: 0;
+  }
+  
+  li.mob-menu {
+    display: block;
+  }
+  
+  .margin-left {
+    margin: 0;
+  }
+  
+  li svg {
+    margin-right: 16px;
+  }
+  
+  .night {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .account {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .menu {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+  }
+  
+  .logo-svg {
+    width: 122px;
+    height: 24px;
+  }
+  
+  h1 {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+  
+  .google-play {
+    width: 135px;
+    height: 40px;
+  }
+  
+  .col-xs-1 {
+    width: var(--col-xs-size);
+  }
+  
+  .col-xs-2 {
+    width: calc(var(--col-xs-size) * 2);
+  }
+  
+  .col-xs-3 {
+    width: 50%;
+  }
+  
+  .col-xs-4 {
+    width: calc(var(--col-xs-size) * 4);
+  }
+  
+  .col-xs-5 {
+    width: calc(var(--col-xs-size) * 5);
+  }
+  
+  .col-xs-6 {
+    width: 100%;
   }
 }
 
