@@ -33,22 +33,27 @@
 }
 
 h2 {
-  margin-bottom: 104px;
+  margin-bottom: 105px;
   font-size: 40px;
   font-weight: 500;
+  position: relative;
+}
+
+h2.active:after {
+  position: absolute;
+  content: " ";
+  height: 4px;
+  background-color: var(--secondary);
+  display: inline-block;
+  --line-width: 100px;
+  width: var(--line-width);
+  bottom: -15px;
+  left: calc(50% - var(--line-width) / 2);
 }
 
 .text-center {
   text-align: center;
 }
-
-/*.title-line {
-  border: none;
-  height: 4px;
-  width: 100px;
-  background-color: var(--secondary);
-  margin: 0 auto 80px;
-}*/
 
 .row {
   display: flex;
@@ -170,6 +175,7 @@ li.mob-menu {
   display: inline-flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .link a span {
@@ -177,16 +183,16 @@ li.mob-menu {
   margin-bottom: 8px;
 }
 
-.link a.active hr {
-  display: block;
-}
-
-.link li hr {
-  display: none;
-  width: 50px;
+.link a.active:hover:after {
+  position: absolute;
+  content: " ";
   height: 4px;
   background-color: var(--secondary);
-  border: none;
+  display: inline-block;
+  --line-width: 50px;
+  width: var(--line-width);
+  bottom: -15px;
+  left: calc(50% - var(--line-width) / 2);
 }
 
 .google-play {
@@ -348,12 +354,20 @@ form {
   background-color: var(--bg-color);
 }
 
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
 .arrow-svg {
   width: 48px;
   height: 48px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   position: absolute;
   z-index: 1;
+  fill: #fff;
+  top: 30%;
+  left: 97.5%;
 }
 
 .last-picture {
@@ -362,9 +376,9 @@ form {
 
 figcaption {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   color: #3077C6;
-  margin: 24px 0;
+  margin: 20px 0 25px;
 }
 
 .location {
