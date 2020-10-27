@@ -42,13 +42,13 @@ h2 {
   text-align: center;
 }
 
-.title-line {
+/*.title-line {
   border: none;
   height: 4px;
   width: 100px;
   background-color: var(--secondary);
   margin: 0 auto 80px;
-}
+}*/
 
 .row {
   display: flex;
