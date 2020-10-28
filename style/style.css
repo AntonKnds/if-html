@@ -544,16 +544,9 @@ figcaption {
   
   .offer-title {
     font-size: 15px;
-  }
-  
-  .col-xs-6 {
     margin-bottom: 32px;
   }
-  
-  .col-xs-6:last-child {
-    margin-bottom: 0;
-  }
-  
+
   .item-header {
     font-size: 15px;
     text-align: center;
@@ -601,7 +594,7 @@ figcaption {
   }
   
   .nav {
-    padding: 12px 16px;
+    margin-top: 0;
     margin-bottom: 40px;
   }
   
@@ -663,7 +656,7 @@ figcaption {
   
   figcaption {
     font-size: 12px;
-    margin: 8px 0 4px;
+    margin: 8px 0 2px;
   }
   
   .location {
@@ -688,6 +681,7 @@ figcaption {
     background-color: #fff;
     justify-content: space-between;
     display: flex;
+    margin-bottom: 24px;
   }
   
   .button3 button {
