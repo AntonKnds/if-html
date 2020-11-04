@@ -171,18 +171,78 @@ a {
   margin: 0;
 }
 
+.search-hide {
+  fill: #BFBFBF;
+  display: none;
+  position: absolute;
+}
+
+.search-form input, .search-form__button {
+  outline: none;
+}
+
 .search-form__name {
   flex-grow: 1;
   border: 3px solid #F3F3F4;
   border-radius: 8px;
   border-right: none;
-  padding: 22px 24px;
+  padding: 21px 24px;
 }
 
 .search-form__date {
   border: 3px solid #F5BD41;
   border-radius: 8px;
   width: 259px;
+  display: flex;
+  position: relative;
+}
+
+.name-field__date1,
+.name-field__date2 {
+  position: absolute;
+  top: -24px;
+  display: none;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  left: 25px;
+}
+
+.name-field__date2 {
+  position: absolute;
+  top: -24px;
+  display: none;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  left: 150px;
+}
+
+.search-form__date input:focus + .name-field__date1 {
+  display: block;
+}
+
+.search-form__date input:focus + .name-field__date2 {
+  display: block;
+}
+
+.search-form__date::after {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  background: #bdbdbd;
+  width: 10px;
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  z-index: 2;
+}
+
+.search-form__date1, .search-form__date2 {
+  width: 50%;
+  border: none;
+  padding: 21px 24px;
+  font-size: 14px;
 }
 
 .search-form__select {
@@ -191,9 +251,10 @@ a {
   border-left: none;
   border-right: none;
   appearance: none;
-  text-align: center;
+  padding: 18px 24px;
   font-size: 18px;
   color: #383838;
+  outline: none;
 }
 
 .search-form__button {
@@ -205,17 +266,22 @@ a {
   color: #FFFFFF;
 }
 
-.name-field {
-  color: #FFF;
-  font-size: 18px;
-  margin-bottom: 24px;
-  margin-left: 24px;
+.search_location {
   position: relative;
 }
 
-.name-field__date {
+.name-field__destination {
   position: absolute;
-  left: 41%;
+  left: 0;
+  top: -24px;
+  display: none;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.search_location input:focus + .name-field__destination {
+  display: block;
 }
 
 .apps-market {
@@ -264,6 +330,10 @@ a {
   fill: #fff;
   top: 30%;
   left: 97.5%;
+}
+
+figure img {
+  width: 100%;
 }
 
 figcaption {
@@ -639,10 +709,6 @@ figcaption {
     margin-bottom: 31px;
   }
   
-  .header {
-    min-height: 100%;
-  }
-  
   .name-field, .search-form {
     display: none;
   }
@@ -653,17 +719,6 @@ figcaption {
     display: flex;
   }
   
-  /* .nav__menu {
-    align-items: center;
-    display: inline-flex;
-   }
- */
-  /*.nav__menu {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 16px;
-  }*/
   .nav__menu-item-night svg {
     font-size: 16px;
     margin: 0 16px 0 0;
@@ -702,11 +757,6 @@ figcaption {
   
   .wrapper .col-xs-6:nth-last-child(-n+2) {
     display: none;
-  }
-  
-  figure img {
-    width: 156px;
-    height: 156px;
   }
   
   figcaption {
@@ -911,17 +961,36 @@ figcaption {
     height: 48px;
     margin-right: 8px;
     margin-bottom: 8px;
+    padding: 24px 0 0 8px;
+  }
+  
+  .name-field__date1 {
+    font-size: 12px;
+    color: #000;
+    left: 8px;
+    top: 6px;
   }
   
   .mobile-date2 {
     width: 152px;
     height: 48px;
+    padding: 24px 0 0 8px;
+  }
+  
+  .name-field__date2 {
+    font-size: 12px;
+    color: #000;
+    position: absolute;
+    top: 6px;
+    text-align: center;
+    left: 168px;
+    display: none;
   }
   
   .mobile-number {
     margin-bottom: 8px;
-    width: 312px;
-    height: 48px;
+    border: none;
+    border-radius: 4px;
   }
   
   .header__mobile-form input {
@@ -935,7 +1004,32 @@ figcaption {
     border: none;
     color: #fff;
     padding: 14px 124px;
-    
+  }
+  
+  .name-field__destination {
+    display: block;
+    font-size: 15px;
+    left: 36px;
+    color: #000;
+    top: 15px;
+    font-weight: 500;
+  }
+  
+  .search-hide {
+    display: block;
+    top: 30%;
+    left: 5%;
+  }
+  
+  .search-form__date {
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    border: none;
+  }
+  
+  .search-form__date::after {
+    display: none;
   }
   
   .col-xs-1 {
