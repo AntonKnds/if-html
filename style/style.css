@@ -26,6 +26,20 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: none;
+}
+
+.uk-link-toggle:focus .uk-link, .uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.uk-card-primary.uk-card-body .uk-link:hover, .uk-card-primary.uk-card-body a:hover, .uk-card-primary > :not([class*=uk-card-media]) .uk-link:hover, .uk-card-primary > :not([class*=uk-card-media]) a:hover, .uk-card-secondary.uk-card-body .uk-link:hover, .uk-card-secondary.uk-card-body a:hover, .uk-card-secondary > :not([class*=uk-card-media]) .uk-link:hover, .uk-card-secondary > :not([class*=uk-card-media]) a:hover, .uk-light .uk-link:hover, .uk-light a:hover, .uk-offcanvas-bar .uk-link:hover, .uk-offcanvas-bar a:hover, .uk-overlay-primary .uk-link:hover, .uk-overlay-primary a:hover, .uk-section-primary:not(.uk-preserve-color) .uk-link:hover, .uk-section-primary:not(.uk-preserve-color) a:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-link:hover, .uk-section-secondary:not(.uk-preserve-color) a:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-link:hover, .uk-tile-primary:not(.uk-preserve-color) a:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-link:hover, .uk-tile-secondary:not(.uk-preserve-color) a:hover {
+  color: var(--primary);
+}
+
 .sprite {
   position: absolute;
   visibility: hidden;
@@ -58,7 +72,7 @@ h1 {
   font-weight: 500;
   font-size: 50px;
   color: #FFF;
-  margin-bottom: 100px;
+  margin-bottom: 145px;
 }
 
 h2 {
@@ -85,13 +99,13 @@ a {
   color: #fff;
 }
 
-[class*="col-"] {
-  flex-grow: 0;
-}
-
 [class*="col"] {
   flex-grow: 1;
   padding: 0 8px;
+}
+
+[class*="col-"] {
+  flex-grow: 0;
 }
 
 .header {
@@ -108,6 +122,7 @@ a {
   justify-content: space-between;
   margin-bottom: 196px;
   margin-top: -69px;
+  line-height: 18px;
 }
 
 .nav__logo {
@@ -171,6 +186,10 @@ a {
   margin: 0;
 }
 
+.search_location {
+  flex-grow: 1;
+}
+
 .search-hide {
   fill: #BFBFBF;
   display: none;
@@ -182,11 +201,11 @@ a {
 }
 
 .search-form__name {
-  flex-grow: 1;
+  width: 100%;
   border: 3px solid #F3F3F4;
   border-radius: 8px;
   border-right: none;
-  padding: 21px 24px;
+  padding: 23px 24px;
 }
 
 .search-form__date {
@@ -200,7 +219,7 @@ a {
 .name-field__date1,
 .name-field__date2 {
   position: absolute;
-  top: -24px;
+  top: -42px;
   display: none;
   font-size: 18px;
   color: #fff;
@@ -210,7 +229,7 @@ a {
 
 .name-field__date2 {
   position: absolute;
-  top: -24px;
+  top: -42px;
   display: none;
   font-size: 18px;
   color: #fff;
@@ -218,11 +237,11 @@ a {
   left: 150px;
 }
 
-.search-form__date input:focus + .name-field__date1 {
+.search-form__date span:hover + .name-field__date1 {
   display: block;
 }
 
-.search-form__date input:focus + .name-field__date2 {
+.search-form__date span:hover + .name-field__date2 {
   display: block;
 }
 
@@ -241,8 +260,11 @@ a {
 .search-form__date1, .search-form__date2 {
   width: 50%;
   border: none;
-  padding: 21px 24px;
-  font-size: 14px;
+  padding: 18px 0;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .search-form__select {
@@ -255,6 +277,7 @@ a {
   font-size: 18px;
   color: #383838;
   outline: none;
+  background-color: #fff;
 }
 
 .search-form__button {
@@ -266,14 +289,19 @@ a {
   color: #FFFFFF;
 }
 
+.search-form__button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 53, 128);
+}
+
 .search_location {
   position: relative;
 }
 
 .name-field__destination {
   position: absolute;
-  left: 0;
-  top: -24px;
+  left: 24px;
+  top: -42px;
   display: none;
   font-size: 18px;
   color: #fff;
@@ -323,13 +351,42 @@ a {
   position: relative;
 }
 
-.arrow-svg {
-  font-size: 48px;
+.uk-slider img {
+  width: 100%;
+}
+
+.uk-position-center-right-out {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   position: absolute;
   fill: #fff;
-  top: 30%;
-  left: 97.5%;
+  top: 35%;
+  font-size: 40px;
+  left: 96%;
+}
+
+.uk-card-default {
+  background-color: transparent;
+  box-shadow: none;
+  margin-right: 16px;
+}
+
+.uk-card-body {
+  padding: 0;
+}
+
+.uk-card-default .uk-card-title {
+  margin: 24px 0;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3077C6;
+}
+
+.uk-card-body p {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #BFBFBF
 }
 
 figure img {
@@ -396,12 +453,11 @@ figcaption {
 
 .arrow-svg90 {
   font-size: 48px;
-  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
   position: absolute;
   fill: #fff;
   transform: rotate(90deg);
   left: 48%;
-  top: 106%;
+  margin-top: 15px;
 }
 
 .active-image {
@@ -438,16 +494,20 @@ figcaption {
   display: inline-flex;
 }
 
-.sign-up-form {
+.alert-hidden {
+  width: 100%;
+}
+
+.uk-alert {
   background-color: var(--bg-color);
   padding: 51px 142px;
   position: relative;
   width: 100%;
-  margin-bottom: -120px;
-  margin-top: 184px;
+  margin-bottom: -10px;
+  margin-top: 60px;
 }
 
-.sign-up-form label {
+.uk-alert label {
   display: block;
   font-weight: 500;
   font-size: 24px;
@@ -465,7 +525,12 @@ figcaption {
   height: 48px;
 }
 
-.sign-up-form__close-img {
+.sign-up-form__btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 53, 128);
+}
+
+.uk-alert-close {
   position: absolute;
   top: 12.5%;
   font-size: 26px;
@@ -580,7 +645,7 @@ figcaption {
 .hotel-review__price {
   position: absolute;
   left: 0;
-  bottom: 4px;
+  bottom: 0;
   font-weight: normal;
   font-size: 18px;
   color: #FFFFFF;
@@ -593,6 +658,10 @@ figcaption {
 
 .img-wrap:hover .hotel-review__price {
   display: inline-flex;
+}
+
+.alert-mobile {
+  display: none;
 }
 
 .footer {
@@ -759,9 +828,19 @@ figcaption {
     display: none;
   }
   
-  figcaption {
+  figcaption,
+  .uk-card-default .uk-card-title {
     font-size: 12px;
     margin: 8px 0 2px;
+  }
+  
+  .uk-card-body p {
+    font-size: 12px;
+    margin-top: -14px;
+  }
+  
+  .uk-card-default {
+    margin: 0;
   }
   
   .location {
@@ -773,13 +852,21 @@ figcaption {
     font-size: 28px;
   }
   
-  .arrow-svg {
-    left: 95.5%;
+  .uk-position-small {
+    fill: #fff;
+    right: -30px;
+    top: 38%;
+    font-size: 28px;
+    transform: none;
+  }
+  
+  .uk-child-width-1-2 > * {
+    margin: 0 8px;
   }
   
   .arrow-svg90,
   .btn-group button:nth-child(3),
-  .sign-up-form {
+  .alert-hidden {
     display: none;
   }
   
@@ -878,13 +965,32 @@ figcaption {
     fill: #000;
   }
   
+  .alert-mobile {
+    display: block;
+  }
+  
   .hotel-review__tip {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 8px;
     padding: 24px 17px;
     background-color: #fff;
+  }
+  
+  .uk-alert {
+    background-color: #fff;
+    padding: 24px 17px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .uk-alert-close {
+    position: relative;
+    font-size: 16px;
   }
   
   .tip-signUp {
@@ -956,6 +1062,11 @@ figcaption {
     padding: 15px 36px;
   }
   
+  .search_location input:focus + .name-field__destination {
+    transform: translate(0, -45px);
+    color: #fff;
+  }
+  
   .mobile-date {
     width: 152px;
     height: 48px;
@@ -991,6 +1102,9 @@ figcaption {
     margin-bottom: 8px;
     border: none;
     border-radius: 4px;
+    font-size: 12px;
+    padding: 12px 0;
+    text-align: center;
   }
   
   .header__mobile-form input {
@@ -1026,6 +1140,7 @@ figcaption {
     display: flex;
     position: relative;
     border: none;
+    width: 100%;
   }
   
   .search-form__date::after {
